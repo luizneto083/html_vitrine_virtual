@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luiz Ferreira Dos Santos Neto e Victor Gabriel">
+    <meta name="description" content="Detalhes de um produto da vitrine de beleza.">
+    <title>Produto | Eline Beauty Cosméticos & Cuidados</title>
+    <style>
+        div { font-family: Arial, sans-serif; box-sizing: border-box; }
+        div.pagina { max-width: 1000px; margin: 0 auto; padding: 16px; background: #fffafc; color: #333333; }
+        div.topo { background: #c2185b; color: #ffffff; padding: 24px; border-radius: 12px; text-align: center; }
+        div.menu { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+        div.item-menu { background: #fde8ef; padding: 8px 16px; border-radius: 20px; }
+        div.bloco { background: #ffffff; border: 1px solid #f0c4d4; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+        div.grade { display: flex; flex-wrap: wrap; gap: 16px; }
+        div.cartao { width: 300px; background: #ffffff; border: 1px solid #f0c4d4; border-radius: 12px; padding: 14px; }
+        div.foto { height: 270px; background: #f3d6e0; color: #8a4b63; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; overflow: hidden; }
+        div.marca { display: inline-block; background: #fde8ef; color: #c2185b; padding: 2px 10px; border-radius: 10px; font-size: 13px; margin-bottom: 6px; }
+        div.preco { font-size: 20px; font-weight: bold; color: #c2185b; margin: 8px 0; }
+        div.aviso { background: #fff3cd; border-radius: 8px; padding: 10px; font-size: 14px; margin-bottom: 16px; }
+        div.duas-colunas { display: flex; flex-wrap: wrap; gap: 24px; }
+        div.coluna { flex: 1; min-width: 260px; }
+        div.rodape { margin-top: 24px; padding: 16px; background: #f3d6e0; border-radius: 12px; text-align: center; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="pagina">
+
+        <header>
+            <div class="topo">
+                <h1>Eline Beauty Cosméticos & Cuidados</h1>
+                <p>Perfumes, cosméticos e cuidados pessoais em um só lugar</p>
+            </div>
+            <nav>
+                <div class="menu">
+                    <div class="item-menu"><a href="index.html">Início</a></div>
+                    <div class="item-menu"><a href="catalogo.html">Catálogo</a></div>
+                    <div class="item-menu"><a href="produto.html"><strong>Produto</strong></a></div>
+                    <div class="item-menu"><a href="carrinho.html">Carrinho</a></div>
+                    <div class="item-menu"><a href="contato.html">Contato</a></div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <div class="bloco">
+                    <div class="duas-colunas">
+
+                        <div class="coluna">
+                            <div class="foto"><img src="../img/Egeo-Dolce.webp" alt="Perfume Egeo Dolce Desodorante Colônia 90ml" width="270"></div>
+                        </div>
+
+                        <div class="coluna">
+                            <div class="marca">O Boticário</div>
+                            <h2>Egeo Dolce Desodorante Colônia 90ml</h2>
+                            <div class="preco">R$ 164,90</div>
+                            <p>
+                                Egeo Dolce Desodorante Colônia é um desodorante colônia feminino Oriental Gourmand desenvolvido para mulheres que desejam seduzir e se divertir com uma fragrância doce e irresistível. Ele entrega uma assinatura açucarada para o dia a dia, unindo a doçura clássica da linha a um frasco colorido.
+                            </p>
+
+                            <table border="1" cellpadding="6">
+                                <caption>Informações do produto</caption>
+                                <tr>
+                                    <th scope="row">Marca</th>
+                                    <td>O Boticário</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Categoria</th>
+                                    <td>Perfumes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Volume</th>
+                                    <td>90 ml</td>
+                                </tr>
+                            </table>
+
+                            <p><a href="carrinho.html">Adicionar ao carrinho</a></p>
+                            <p><a href="catalogo.html">← Voltar ao catálogo</a></p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="bloco">
+                    <h2>Mais informações</h2>
+                    <details>
+                        <summary>Como usar</summary>
+                        <p>Borrife a fragrância nas áreas onde há maior circulação do sangue, como o pescoço, dobras do cotovelo e atrás das orelhas. Sinta a fragrância doce de Egeo Dolce exalar no ar.</p>
+                    </details>
+                    <details>
+                        <summary>Formas de pagamento e entrega</summary>
+                        <p>Combine direto com o vendedor pela página de <a href="contato.html">contato</a>.</p>
+                    </details>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="rodape">
+                <p>Projeto acadêmico de Luiz Ferreira Dos Santos Neto e Victor Gabriel &mdash; Desenvolvimento Front-End para Web, UNIPÊ.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

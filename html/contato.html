@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luiz Ferreira Dos Santos Neto e Victor Gabriel">
+    <meta name="description" content="Contato com o vendedor da vitrine de beleza.">
+    <title>Contato | Eline Beauty Cosméticos & Cuidados</title>
+    <style>
+        div { font-family: Arial, sans-serif; box-sizing: border-box; }
+        div.pagina { max-width: 1000px; margin: 0 auto; padding: 16px; background: #fffafc; color: #333333; }
+        div.topo { background: #c2185b; color: #ffffff; padding: 24px; border-radius: 12px; text-align: center; }
+        div.menu { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+        div.item-menu { background: #fde8ef; padding: 8px 16px; border-radius: 20px; }
+        div.bloco { background: #ffffff; border: 1px solid #f0c4d4; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+        div.grade { display: flex; flex-wrap: wrap; gap: 16px; }
+        div.cartao { width: 300px; background: #ffffff; border: 1px solid #f0c4d4; border-radius: 12px; padding: 14px; }
+        div.foto { height: 270px; background: #f3d6e0; color: #8a4b63; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; overflow: hidden; }
+        div.marca { display: inline-block; background: #fde8ef; color: #c2185b; padding: 2px 10px; border-radius: 10px; font-size: 13px; margin-bottom: 6px; }
+        div.preco { font-size: 20px; font-weight: bold; color: #c2185b; margin: 8px 0; }
+        div.aviso { background: #fff3cd; border-radius: 8px; padding: 10px; font-size: 14px; margin-bottom: 16px; }
+        div.duas-colunas { display: flex; flex-wrap: wrap; gap: 24px; }
+        div.coluna { flex: 1; min-width: 260px; }
+        div.rodape { margin-top: 24px; padding: 16px; background: #f3d6e0; border-radius: 12px; text-align: center; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="pagina">
+
+        <header>
+            <div class="topo">
+                <h1>Eline Beauty Cosméticos & Cuidados</h1>
+                <p>Perfumes, cosméticos e cuidados pessoais em um só lugar</p>
+            </div>
+            <nav>
+                <div class="menu">
+                    <div class="item-menu"><a href="index.html">Início</a></div>
+                    <div class="item-menu"><a href="catalogo.html">Catálogo</a></div>
+                    <div class="item-menu"><a href="produto.html">Produto</a></div>
+                    <div class="item-menu"><a href="carrinho.html">Carrinho</a></div>
+                    <div class="item-menu"><a href="contato.html"><strong>Contato</strong></a></div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <div class="duas-colunas">
+
+                    <div class="coluna">
+                        <div class="bloco">
+                            <h2>Fale com o vendedor</h2>
+                            <address>
+                                <p><strong>WhatsApp:</strong> (83) 98795-3942</p>
+                                <p><strong>Instagram:</strong> @elinesemijoiasebeauty</p>
+                                <p><strong>E-mail:</strong> elinesnoberto@gmail.com</p>
+                                <p><strong>Atendimento:</strong> João Pessoa, Paraíba</p>
+                            </address>
+                            <p></p>
+                        </div>
+                    </div>
+
+                    <div class="coluna">
+                        <div class="bloco">
+                            <h2>Envie uma mensagem</h2>
+                            <form action="#" method="post">
+                                <p>
+                                    <label for="nome">Nome:</label><br>
+                                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                                </p>
+                                <p>
+                                    <label for="email">E-mail:</label><br>
+                                    <input type="email" id="email" name="email" placeholder="seunome@exemplo.com" required>
+                                </p>
+                                <p>
+                                    <label for="assunto">Assunto:</label><br>
+                                    <select id="assunto" name="assunto">
+                                        <option value="duvida">Dúvida sobre produto</option>
+                                        <option value="pedido">Fazer um pedido</option>
+                                        <option value="outros">Outros</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <label for="mensagem">Mensagem:</label><br>
+                                    <textarea id="mensagem" name="mensagem" rows="5" cols="30" placeholder="Escreva sua mensagem" required></textarea>
+                                </p>
+                                <button type="submit">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="rodape">
+                <p>Projeto acadêmico de Luiz Ferreira Dos Santos Neto e Victor Gabriel &mdash; Desenvolvimento Front-End para Web, UNIPÊ.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

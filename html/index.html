@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luiz Ferreira Dos Santos Neto e Victor Gabriel">
+    <meta name="description" content="Vitrine virtual de cosméticos e produtos de cuidados pessoais.">
+    <title>Início | Eline Beauty Cosméticos & Cuidados</title>
+    <style>
+        div { font-family: Arial, sans-serif; box-sizing: border-box; }
+        div.pagina { max-width: 1000px; margin: 0 auto; padding: 16px; background: #fffafc; color: #333333; }
+        div.topo { background: #c2185b; color: #ffffff; padding: 24px; border-radius: 12px; text-align: center; }
+        div.menu { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+        div.item-menu { background: #fde8ef; padding: 8px 16px; border-radius: 20px; }
+        div.bloco { background: #ffffff; border: 1px solid #f0c4d4; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+        div.grade { display: flex; flex-wrap: wrap; gap: 16px; }
+        div.cartao { width: 300px; background: #ffffff; border: 1px solid #f0c4d4; border-radius: 12px; padding: 14px; }
+        div.foto { height: 270px; background: #f3d6e0; color: #8a4b63; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; overflow: hidden; }
+        div.marca { display: inline-block; background: #fde8ef; color: #c2185b; padding: 2px 10px; border-radius: 10px; font-size: 13px; margin-bottom: 6px; }
+        div.preco { font-size: 20px; font-weight: bold; color: #c2185b; margin: 8px 0; }
+        div.aviso { background: #fff3cd; border-radius: 8px; padding: 10px; font-size: 14px; margin-bottom: 16px; }
+        div.duas-colunas { display: flex; flex-wrap: wrap; gap: 24px; }
+        div.coluna { flex: 1; min-width: 260px; }
+        div.rodape { margin-top: 24px; padding: 16px; background: #f3d6e0; border-radius: 12px; text-align: center; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="pagina">
+
+        <header>
+            <div class="topo">
+                <h1>Eline Beauty Cosméticos & Cuidados</h1>
+                <p>Perfumes, cosméticos e cuidados pessoais em um só lugar</p>
+            </div>
+            <nav>
+                <div class="menu">
+                    <div class="item-menu"><a href="index.html"><strong>Início</strong></a></div>
+                    <div class="item-menu"><a href="catalogo.html">Catálogo</a></div>
+                    <div class="item-menu"><a href="produto.html">Produto</a></div>
+                    <div class="item-menu"><a href="carrinho.html">Carrinho</a></div>
+                    <div class="item-menu"><a href="contato.html">Contato</a></div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <div class="bloco">
+                    <h2>Bem-vindo(a)!</h2>
+                    <p>
+                        Aqui você encontra produtos de <strong>O Boticário</strong>, <strong>Natura</strong>
+                        e <strong>Mary Kay</strong> reunidos em uma única vitrine virtual. Navegue pelo
+                        catálogo, veja os detalhes de cada item e fale direto com o vendedor.
+                    </p>
+                    <p><a href="catalogo.html">Ver catálogo completo →</a></p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Nossas marcas</h2>
+                <div class="grade">
+                    <div class="cartao">
+                        <h3>O Boticário</h3>
+                        <p>Perfumes, maquiagem e cuidados com o corpo.</p>
+                    </div>
+                    <div class="cartao">
+                        <h3>Natura</h3>
+                        <p>Perfumaria, hidratantes e cuidados com a pele.</p>
+                    </div>
+                    <div class="cartao">
+                        <h3>Mary Kay</h3>
+                        <p>Maquiagem e linhas de tratamento facial.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Produtos em destaque</h2>
+                <div class="aviso">Produtos e valores.</div>
+                <div class="grade">
+
+                    <div class="cartao">
+                        <div class="foto"><img src="../img/Egeo-Dolce.webp" alt="Perfume Egeo Dolce Desodorante Colônia 90ml" width="270"></div>
+                        <div class="marca">O Boticário</div>
+                        <h3>Egeo Dolce Desodorante Colônia 90ml</h3>
+                        <div class="preco">R$ 164,90</div>
+                        <a href="produto.html">Ver detalhes</a>
+                    </div>
+
+                    <div class="cartao">
+                        <div class="foto"><img src="..//img/Base-Serum-Nude-Me-Una-2.webp" alt="Base Serum Nude Me" width="270"></div>
+                        <div class="marca">Natura</div>
+                        <h3>Base Sérum Nude Me Una</h3>
+                        <div class="preco">R$ 179,90</div>
+                        <a href="produto.html">Ver detalhes</a>
+                    </div>
+
+                    <div class="cartao">
+                        <div class="foto"><img src="../img/Base-Time-Wise-3D-Beige.webp" alt="Base Time Wise 3D 30ml" width="270"></div>
+                        <div class="marca">Mary Kay</div>
+                        <h3>Base TimeWise 3D 30ml</h3>
+                        <div class="preco">R$ 82,90</div>
+                        <a href="produto.html">Ver detalhes</a>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="rodape">
+                <p>Projeto acadêmico de Luiz Ferreira Dos Santos Neto e Victor Gabriel &mdash; Desenvolvimento Front-End para Web, UNIPÊ.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

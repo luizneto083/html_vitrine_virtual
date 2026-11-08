@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Luiz Ferreira Dos Santos Neto e Victor Gabriel">
+    <meta name="description" content="Catálogo de produtos de O Boticário, Natura e Mary Kay.">
+    <title>Catálogo | Eline Beauty Cosméticos & Cuidados</title>
+    <style>
+        div { font-family: Arial, sans-serif; box-sizing: border-box; }
+        div.pagina { max-width: 1000px; margin: 0 auto; padding: 16px; background: #fffafc; color: #333333; }
+        div.topo { background: #c2185b; color: #ffffff; padding: 24px; border-radius: 12px; text-align: center; }
+        div.menu { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+        div.item-menu { background: #fde8ef; padding: 8px 16px; border-radius: 20px; }
+        div.bloco { background: #ffffff; border: 1px solid #f0c4d4; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+        div.grade { display: flex; flex-wrap: wrap; gap: 16px; }
+        div.cartao { width: 300px; background: #ffffff; border: 1px solid #f0c4d4; border-radius: 12px; padding: 14px; }
+        div.foto { height: 270px; background: #f3d6e0; color: #8a4b63; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; overflow: hidden; }
+        div.marca { display: inline-block; background: #fde8ef; color: #c2185b; padding: 2px 10px; border-radius: 10px; font-size: 13px; margin-bottom: 6px; }
+        div.preco { font-size: 20px; font-weight: bold; color: #c2185b; margin: 8px 0; }
+        div.aviso { background: #fff3cd; border-radius: 8px; padding: 10px; font-size: 14px; margin-bottom: 16px; }
+        div.duas-colunas { display: flex; flex-wrap: wrap; gap: 24px; }
+        div.coluna { flex: 1; min-width: 260px; }
+        div.rodape { margin-top: 24px; padding: 16px; background: #f3d6e0; border-radius: 12px; text-align: center; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="pagina">
+
+        <header>
+            <div class="topo">
+                <h1>Eline Beauty Cosméticos & Cuidados</h1>
+                <p>Perfumes, cosméticos e cuidados pessoais em um só lugar</p>
+            </div>
+            <nav>
+                <div class="menu">
+                    <div class="item-menu"><a href="index.html">Início</a></div>
+                    <div class="item-menu"><a href="catalogo.html"><strong>Catálogo</strong></a></div>
+                    <div class="item-menu"><a href="produto.html">Produto</a></div>
+                    <div class="item-menu"><a href="carrinho.html">Carrinho</a></div>
+                    <div class="item-menu"><a href="contato.html">Contato</a></div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <div class="bloco">
+                    <h2>Buscar produtos</h2>
+                    <form action="#">
+                        <p>
+                            <label for="busca">Nome do produto:</label>
+                            <input type="search" id="busca" name="busca" placeholder="Digite o nome do produto">
+                        </p>
+                        <p>
+                            <label for="marca">Marca:</label>
+                            <select id="marca" name="marca">
+                                <option value="todas">Todas</option>
+                                <option value="boticario">O Boticário</option>
+                                <option value="natura">Natura</option>
+                                <option value="marykay">Mary Kay</option>
+                            </select>
+
+                            <label for="categoria">Categoria:</label>
+                            <select id="categoria" name="categoria">
+                                <option value="todas">Todas</option>
+                                <option value="perfumes">Perfumes</option>
+                                <option value="corpo">Corpo e banho</option>
+                                <option value="maquiagem">Maquiagem</option>
+                                <option value="pele">Cuidados com a pele</option>
+                            </select>
+                        </p>
+                        <button type="button">Buscar</button>
+                    </form>
+                </div>
+            </section>
+
+            <section>
+                <h2>Todos os produtos</h2>
+                <div class="aviso">Valores e produtos. (Por enquanto os detalhes encaminham para um mesmo produto)</div>
+                <div class="grade">
+
+                    <div class="cartao">
+                        <div class="foto"><img src="../img/Egeo-Dolce.webp" alt="Perfume Egeo Dolce Desodorante Colônia 90ml" width="270"></div>
+                        <div class="marca">O Boticário</div>
+                        <h3>Egeo Dolce Desodorante Colônia 90ml</h3>
+                        <p>A fragrância feminina que é tão irresistível quanto um doce te convida a seduzir com um toque de diversão.</p>
+                        <div class="preco">R$ 164,90</div>
+                        <a href="produto.html">Ver detalhes</a>
+                    </div>
+
+                    <div class="cartao">
+                        <div class="foto"><img src="../img/Nativa-SPA-Loção-Hidratante-Desodorante-Corporal-Nativa-Spa-Ameixa-Negra.webp" alt="Loção Hidratante Desodorante Corporal Nativa Spa Ameixa Negra 400ml" width="270"></div>
+                        <div class="marca">O Boticário</div>
+                        <h3>Nativa SPA Loção Hidratante Desodorante Corporal Nativa Spa Ameixa Negra 400ml</h3>
+                        <p>A loção hidratante Nativa Spa Ameixa Negra traz uma explosão de hidratação em uma fragrância envolvente.</p>
+                        <div class="preco">R$ 89,90</div>
+                        <a href="produto.html">Ver detalhes</a>
+                    </div>
+
+                    <div class="cartao">
+                        <div class="foto"><img src="../img/Deo-Colônia-Masculino-Kaiak-Aventura.webp" alt="Deo Colônia Masculino Kaiak Aventura 100 ml" width="270"></div>
+                        <div class="marca">Natura</div>
+                        <h3>Deo Colônia Masculino Kaiak Aventura 100 ml</h3>
+                        <p>Sinta a adrenalina no corpo com a mistura vibrante do frescor das notas cítricas e das ervas aromáticas para perfumar o seu dia.</p>
+                        <div class="preco">R$ 189,90</div>
+                        <a href="produto.html">Ver detalhes</a>
+                    </div>
+
+                    <div class="cartao">
+                        <div class="foto"><img src="..//img/Base-Serum-Nude-Me-Una-2.webp" alt="Base Serum Nude Me" width="270"></div>
+                        <div class="marca">Natura</div>
+                        <h3>Base Sérum Nude Me Una</h3>
+                        <p>Efeito segunda pele com poderosa ação revigorante. Textura sérum e leve que se funde delicadamente à pele.</p>
+                        <div class="preco">R$ 179,90</div>
+                        <a href="produto.html">Ver detalhes</a>
+                    </div>
+
+                    <div class="cartao">
+                        <div class="foto"><img src="../img/Base-Time-Wise-3D-Beige.webp" alt="Base Time Wise 3D 30ml" width="270"></div>
+                        <div class="marca">Mary Kay</div>
+                        <h3>Base Time Wise 3D 30ml</h3>
+                        <p>Combina maquiagem e cuidados com a pele em uma fórmula desenvolvida para proporcionar acabamento matte natural, conforto e longa duração. Com até 12 horas de controle da oleosidade.</p>
+                        <div class="preco">R$ 82,90</div>
+                        <a href="produto.html">Ver detalhes</a>
+                    </div>
+
+                    <div class="cartao">
+                        <div class="foto"><img src="../img/Hidratante-Antioxidante-TimeWise.webp" alt="Hidratante Antioxidante TimeWise 85g" width="270"></div>
+                        <div class="marca">Mary Kay</div>
+                        <h3>Hidratante Antioxidante TimeWise 85g</h3>
+                        <p>Deixe a pele com uma aparência mais radiante a cada aplicação do Hidratante Antioxidante TimeWise® com uma fórmula rica em antioxidantes que proporcionam 12 horas de hidratação.</p>
+                        <div class="preco">R$ 109,90</div>
+                        <a href="produto.html">Ver detalhes</a>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="rodape">
+                <p>Projeto acadêmico de Luiz Ferreira Dos Santos Neto e Victor Gabriel &mdash; Desenvolvimento Front-End para Web, UNIPÊ.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
