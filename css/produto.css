@@ -1,0 +1,28 @@
+.produto-detalhe {
+  display: grid;
+  gap: var(--esp-3);
+}
+
+.produto-detalhe .foto {
+  max-width: 420px;
+}
+
+.produto-info {
+  margin: var(--esp-2) 0;
+}
+
+details {
+  margin-bottom: var(--esp-1);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .produto-detalhe {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}

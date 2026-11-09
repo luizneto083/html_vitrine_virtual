@@ -1,110 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Luiz Ferreira Dos Santos Neto e Victor Gabriel">
-    <meta name="description" content="Carrinho de compras demonstrativo da vitrine de beleza.">
-    <title>Carrinho | Eline Beauty Cosméticos & Cuidados </title>
-    <style>
-        div { font-family: Arial, sans-serif; box-sizing: border-box; }
-        div.pagina { max-width: 1000px; margin: 0 auto; padding: 16px; background: #fffafc; color: #333333; }
-        div.topo { background: #c2185b; color: #ffffff; padding: 24px; border-radius: 12px; text-align: center; }
-        div.menu { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
-        div.item-menu { background: #fde8ef; padding: 8px 16px; border-radius: 20px; }
-        div.bloco { background: #ffffff; border: 1px solid #f0c4d4; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
-        div.grade { display: flex; flex-wrap: wrap; gap: 16px; }
-        div.cartao { width: 300px; background: #ffffff; border: 1px solid #f0c4d4; border-radius: 12px; padding: 14px; }
-        div.foto { height: 270px; background: #f3d6e0; color: #8a4b63; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; overflow: hidden; }
-        div.marca { display: inline-block; background: #fde8ef; color: #c2185b; padding: 2px 10px; border-radius: 10px; font-size: 13px; margin-bottom: 6px; }
-        div.preco { font-size: 20px; font-weight: bold; color: #c2185b; margin: 8px 0; }
-        div.aviso { background: #fff3cd; border-radius: 8px; padding: 10px; font-size: 14px; margin-bottom: 16px; }
-        div.duas-colunas { display: flex; flex-wrap: wrap; gap: 24px; }
-        div.coluna { flex: 1; min-width: 260px; }
-        div.rodape { margin-top: 24px; padding: 16px; background: #f3d6e0; border-radius: 12px; text-align: center; font-size: 14px; }
-    </style>
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="author"
+      content="Luiz Ferreira Dos Santos Neto e Victor Gabriel"
+    />
+    <meta
+      name="description"
+      content="Carrinho de compras demonstrativo da vitrine de beleza."
+    />
+    <title>Carrinho | Eline Beauty Cosméticos &amp; Cuidados</title>
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/carrinho.css" />
+  </head>
+  <body>
+    <a class="pular-conteudo" href="#conteudo">Ir para o conteúdo</a>
     <div class="pagina">
+      <header class="topo">
+        <a class="logo" href="index.html"
+          >Eline Beauty Cosméticos &amp; Cuidados</a
+        >
+        <p>Perfumes, cosméticos e cuidados pessoais em um só lugar</p>
+      </header>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="produto.html">Produto</a></li>
+          <li><a href="carrinho.html" aria-current="page">Carrinho</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
 
-        <header>
-            <div class="topo">
-                <h1>Eline Beauty Cosméticos & Cuidados</h1>
-                <p>Perfumes, cosméticos e cuidados pessoais em um só lugar</p>
-            </div>
-            <nav>
-                <div class="menu">
-                    <div class="item-menu"><a href="index.html">Início</a></div>
-                    <div class="item-menu"><a href="catalogo.html">Catálogo</a></div>
-                    <div class="item-menu"><a href="produto.html">Produto</a></div>
-                    <div class="item-menu"><a href="carrinho.html"><strong>Carrinho</strong></a></div>
-                    <div class="item-menu"><a href="contato.html">Contato</a></div>
-                </div>
-            </nav>
-        </header>
+      <main id="conteudo">
+        <h1 class="so-leitor">Carrinho de compras</h1>
+        <section class="bloco" aria-labelledby="t-carrinho">
+          <h2 id="t-carrinho">Seu carrinho</h2>
+          <p class="aviso">
+            Carrinho demonstrativo: não há pagamento real e os valores e
+            quantidades são fixos, apenas de exemplo.
+          </p>
 
-        <main>
-            <section>
-                <div class="bloco">
-                    <h2>Seu carrinho</h2>
-                    <div class="aviso">
-                        Carrinho demonstrativo: não há pagamento real. Por enquanto os valores são fixos;
-                        o cálculo automático será feito com JavaScript.
-                    </div>
+          <table class="tabela-carrinho">
+            <caption class="so-leitor">
+              Itens do carrinho
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Produto</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">
+                  Egeo Dolce Desodorante Colônia 90ml
+                  <small>(O Boticário)</small>
+                </th>
+                <td data-rotulo="Preço">R$ 164,90</td>
+                <td data-rotulo="Quantidade">
+                  <label class="so-leitor" for="qtd1"
+                    >Quantidade de Egeo Dolce Desodorante Colônia 90ml</label
+                  >
+                  <input
+                    class="qtd"
+                    type="number"
+                    id="qtd1"
+                    name="qtd1"
+                    min="1"
+                    value="1"
+                    readonly
+                  />
+                </td>
+                <td data-rotulo="Subtotal">R$ 164,90</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Base Sérum Nude Me Una <small>(Natura)</small>
+                </th>
+                <td data-rotulo="Preço">R$ 179,90</td>
+                <td data-rotulo="Quantidade">
+                  <label class="so-leitor" for="qtd2"
+                    >Quantidade de Base Sérum Nude Me Una</label
+                  >
+                  <input
+                    class="qtd"
+                    type="number"
+                    id="qtd2"
+                    name="qtd2"
+                    min="1"
+                    value="2"
+                    readonly
+                  />
+                </td>
+                <td data-rotulo="Subtotal">R$ 359,80</td>
+              </tr>
+              <tr>
+                <th scope="row">
+                  Base Time Wise 3D 30ml <small>(Mary Kay)</small>
+                </th>
+                <td data-rotulo="Preço">R$ 82,90</td>
+                <td data-rotulo="Quantidade">
+                  <label class="so-leitor" for="qtd3"
+                    >Quantidade de Base Time Wise 3D 30ml</label
+                  >
+                  <input
+                    class="qtd"
+                    type="number"
+                    id="qtd3"
+                    name="qtd3"
+                    min="1"
+                    value="1"
+                    readonly
+                  />
+                </td>
+                <td data-rotulo="Subtotal">R$ 82,90</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="3">Frete</th>
+                <td>A combinar com o vendedor</td>
+              </tr>
+              <tr class="total-linha">
+                <th scope="row" colspan="3">Total</th>
+                <td><strong>R$ 607,60</strong></td>
+              </tr>
+            </tfoot>
+          </table>
 
-                    <table border="1" cellpadding="8">
-                        <thead>
-                            <tr>
-                                <th scope="col">Produto</th>
-                                <th scope="col">Preço</th>
-                                <th scope="col">Quantidade</th>
-                                <th scope="col">Subtotal</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Egeo Dolce (O Boticário)</td>
-                                <td>R$ 164,90</td>
-                                <td><input type="number" min="1" value="1"></td>
-                                <td>R$ 164,90</td>
-                            </tr>
-                            <tr>
-                                <td>Base Serum Nude Me (Natura)</td>
-                                <td>R$ 179,90</td>
-                                <td><input type="number" min="1" value="2"></td>
-                                <td>R$ 359,80</td>
-                            </tr>
-                            <tr>
-                                <td>Base Time Wise 3D Beige (Mary Kay)</td>
-                                <td>R$ 82,90</td>
-                                <td><input type="number" min="1" value="1"></td>
-                                <td>R$ 82,90</td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th scope="row" colspan="3">Total</th>
-                                <td><strong>R$ 607,60</strong></td>
-                            </tr>
-                        </tfoot>
-                    </table>
+          <div class="acoes">
+            <a class="botao" href="contato.html"
+              >Finalizar pedido com o vendedor</a
+            >
+            <a class="botao botao-claro" href="catalogo.html"
+              >← Continuar comprando</a
+            >
+          </div>
+        </section>
+      </main>
 
-                    <p>
-                        <button type="button">Finalizar pedido</button>
-                    </p>
-                    <p><a href="catalogo.html">← Continuar comprando</a></p>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="rodape">
-                <p>Projeto acadêmico de Luiz Ferreira Dos Santos Neto e Victor Gabriel &mdash; Desenvolvimento Front-End para Web, UNIPÊ.</p>
-            </div>
-        </footer>
-
+      <footer class="rodape">
+        <p>
+          Projeto acadêmico de Luiz Ferreira Dos Santos Neto e Victor Gabriel
+          &mdash; Desenvolvimento Front-End para Web, UNIPÊ.
+        </p>
+      </footer>
     </div>
-
-</body>
+  </body>
 </html>

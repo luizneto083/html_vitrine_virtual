@@ -1,6 +1,6 @@
 # Vitrine Virtual de Cosméticos
 
-> 🚧 **Projeto em desenvolvimento.** Esta é uma versão inicial (protótipo) e ainda vai receber novas funcionalidades.
+> 🚧 **Projeto em desenvolvimento.** Esta é uma versão em evolução e ainda vai receber novas páginas e melhorias.
 
 Projeto final da disciplina de **Desenvolvimento Front-End para Web** (UNIPÊ), desenvolvido em dupla por
 **Luiz Ferreira Dos Santos Neto** e **Victor Gabriel**.
@@ -13,46 +13,59 @@ de um vendedor independente, reunindo produtos de **O Boticário**, **Natura** e
 O objetivo é apresentar o catálogo de forma organizada e permitir que o cliente consulte informações e preços
 e entre em contato com o vendedor, que não possui loja física.
 
-## Situação atual do protótipo
+## Tecnologias
 
-Por enquanto o site está sendo feito somente com **HTML** e **CSS interno** (estilização de `div`).
-O **JavaScript** será adicionado nas próximas etapas, conforme o conteúdo for visto em aula.
+- **HTML5** semântico (`header`, `nav`, `main`, `section`, `article`, `aside`, `figure`, `footer`)
+- **CSS3** em arquivos externos: um arquivo global com variáveis, cores e componentes comuns, e um arquivo para cada página
+- Layout responsivo (celular, tablet e computador) com CSS Grid, Flexbox e media queries
 
-### ✅ Já feito
+## Funcionalidades
 
-- [x] Página inicial com apresentação das marcas e produtos em destaque
-- [x] Catálogo de produtos com imagem, marca, descrição e preço
-- [x] Página de detalhes do produto
-- [x] Página de carrinho (demonstrativa, com valores fixos)
-- [x] Página de contato com informações do vendedor e formulário
-- [x] Menu de navegação presente em todas as páginas
-- [x] Fotos dos produtos em destaque na página inicial
+- **Página inicial** com apresentação da loja, das marcas e dos produtos em destaque
+- **Catálogo** com 6 produtos (imagem, marca, descrição e preço) e **filtros por marca e por categoria**, que podem ser combinados entre si; quando nenhum produto atende à combinação escolhida, uma mensagem é exibida
+- **Página de produto** com foto, preço, descrição, tabela de informações e detalhes de uso e pagamento
+- **Carrinho demonstrativo** com itens de exemplo, subtotais, frete a combinar e total
+- **Contato** com os dados do vendedor (WhatsApp e Instagram clicáveis) e formulário com validação nativa do navegador (campos obrigatórios, e-mail válido, telefone no formato brasileiro e tamanho mínimo da mensagem)
+- **Página 404** simples, com link de volta ao início
+- Menu de navegação igual em todas as páginas, com destaque para a página atual
+- Favicon do site
 
-### 🔧 Ainda em desenvolvimento
+## Acessibilidade e qualidade
 
-- [ ] Busca de produtos por nome (JavaScript)
-- [ ] Filtros por marca e categoria (JavaScript)
-- [ ] Carrinho funcional, com alteração de quantidades e cálculo do total (JavaScript)
-- [ ] Página de detalhes carregando o produto escolhido no catálogo
-- [ ] Fotos em todas as páginas
-- [ ] Melhorias visuais (CSS)
+- Link "Ir para o conteúdo" para navegação por teclado
+- Indicação visível de foco nos links, botões e campos
+- Todas as imagens com texto alternativo (`alt`) e dimensões definidas
+- Campos de formulário com `label`, inclusive os de quantidade do carrinho
+- Hierarquia de títulos correta, com um `h1` por página
+- Arquivos de imagem com nomes padronizados (letras minúsculas, sem acentos e sem espaços)
+- HTML validado no validador oficial do W3C, sem erros
+- Layout testado em 360px, 768px e 1280px de largura, sem rolagem horizontal
 
 ## Páginas
 
-| Página | Descrição |
-|---|---|
-| `index.html` | Início: apresentação da loja, marcas e destaques |
-| `catalogo.html` | Catálogo com todos os produtos e área de busca |
-| `produto.html` | Detalhes de um produto |
-| `carrinho.html` | Carrinho de compras demonstrativo |
-| `contato.html` | Contato com o vendedor |
+| Página          | Descrição                                                      |
+| --------------- | -------------------------------------------------------------- |
+| `index.html`    | Início: apresentação da loja, marcas e produtos em destaque    |
+| `catalogo.html` | Catálogo com todos os produtos e filtros por marca e categoria |
+| `produto.html`  | Detalhes de um produto                                         |
+| `carrinho.html` | Carrinho de compras demonstrativo                              |
+| `contato.html`  | Contato com o vendedor e formulário de mensagem                |
+| `404.html`      | Página de "não encontrado"                                     |
 
 ## Estrutura de pastas
 
 ```
-vitrine-cosmeticos/
-├── html/       Páginas do site
-├── img/        Fotos dos produtos
+html_vitrine_virtual/
+├── css/
+│   ├── global.css      Variáveis, cabeçalho, menu, cards, botões, tabelas e formulários
+│   ├── index.css       Estilos da página inicial
+│   ├── catalogo.css    Filtros e mensagem de "nenhum produto"
+│   ├── produto.css     Estilos da página de produto
+│   ├── carrinho.css    Estilos do carrinho (tabela vira cartões no celular)
+│   ├── contato.css     Estilos da página de contato
+│   └── 404.css         Estilos da página 404
+├── html/               Páginas do site
+├── img/                Fotos dos produtos e favicon
 └── README.md
 ```
 
@@ -60,7 +73,14 @@ vitrine-cosmeticos/
 
 Abra o arquivo `html/index.html` no navegador, ou use a extensão **Live Server** do VS Code.
 
+## Próximos passos
+
+- [ ] Criar a página de detalhes de cada um dos demais produtos e ligar cada card do catálogo à sua página (por enquanto, todos os cards levam à mesma página de produto, apenas para demonstração)
+- [ ] Adicionar mais produtos ao catálogo
+
 ## Observações
 
 - Projeto acadêmico, executado localmente, sem banco de dados e sem pagamento real.
+- O carrinho é demonstrativo: os itens, as quantidades e os valores são fixos.
+- O formulário de contato abre o programa de e-mail do usuário para enviar a mensagem.
 - Produtos, preços e informações de contato podem ser exemplos, a serem ajustados conforme o desenvolvimento.

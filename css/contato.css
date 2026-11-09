@@ -1,0 +1,7 @@
+.contato-dados p {
+  margin: 0 0 var(--esp-1);
+}
+
+textarea {
+  resize: vertical;
+}

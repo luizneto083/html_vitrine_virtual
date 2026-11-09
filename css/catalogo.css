@@ -1,0 +1,86 @@
+/* Filtros por marca e categoria somente com CSS (radios + :has) */
+.filtros {
+  display: grid;
+  gap: var(--esp-2);
+}
+
+.filtros fieldset {
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  margin: 0;
+  padding: var(--esp-1) var(--esp-2) var(--esp-2);
+}
+
+.filtros legend {
+  font-weight: bold;
+  padding: 0 6px;
+}
+
+.filtros .opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filtros input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.filtros label {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: var(--rosa-claro);
+  color: var(--rosa-escuro);
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.filtros input[type="radio"]:checked + label {
+  background: var(--rosa);
+  color: var(--branco);
+  font-weight: bold;
+}
+
+.filtros input[type="radio"]:focus-visible + label {
+  outline: 3px solid #1a57c9;
+  outline-offset: 2px;
+}
+
+/* Marca */
+.catalogo:has(#marca-boticario:checked) .cartao:not([data-marca="boticario"]),
+.catalogo:has(#marca-natura:checked) .cartao:not([data-marca="natura"]),
+.catalogo:has(#marca-marykay:checked) .cartao:not([data-marca="marykay"]),
+/* Categoria */
+.catalogo:has(#cat-perfumes:checked) .cartao:not([data-categoria="perfumes"]),
+.catalogo:has(#cat-corpo:checked) .cartao:not([data-categoria="corpo"]),
+.catalogo:has(#cat-maquiagem:checked) .cartao:not([data-categoria="maquiagem"]),
+.catalogo:has(#cat-pele:checked) .cartao:not([data-categoria="pele"]) {
+  display: none;
+}
+
+.sem-resultado {
+  display: none;
+  margin: 0;
+}
+
+/* Aparece quando todos os cards estão ocultos (combinações sem produto) */
+.catalogo:has(#marca-boticario:checked):has(#cat-maquiagem:checked)
+  .sem-resultado,
+.catalogo:has(#marca-boticario:checked):has(#cat-pele:checked) .sem-resultado,
+.catalogo:has(#marca-natura:checked):has(#cat-corpo:checked) .sem-resultado,
+.catalogo:has(#marca-natura:checked):has(#cat-pele:checked) .sem-resultado,
+.catalogo:has(#marca-marykay:checked):has(#cat-perfumes:checked) .sem-resultado,
+.catalogo:has(#marca-marykay:checked):has(#cat-corpo:checked) .sem-resultado {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .filtros {
+    grid-template-columns: 1fr 1fr;
+  }
+}

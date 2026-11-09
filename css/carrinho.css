@@ -1,0 +1,46 @@
+.qtd {
+  width: 4.5rem;
+}
+
+.total-linha th,
+.total-linha td {
+  background: var(--rosa-claro);
+  font-size: 1.1rem;
+}
+
+/* Mobile: cada linha vira um cartão */
+@media (max-width: 767px) {
+  .tabela-carrinho thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .tabela-carrinho,
+  .tabela-carrinho tbody,
+  .tabela-carrinho tfoot,
+  .tabela-carrinho tr,
+  .tabela-carrinho td,
+  .tabela-carrinho th {
+    display: block;
+  }
+
+  .tabela-carrinho tr {
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    margin-bottom: var(--esp-1);
+    overflow: hidden;
+  }
+
+  .tabela-carrinho td,
+  .tabela-carrinho th {
+    border: 0;
+  }
+
+  .tabela-carrinho td[data-rotulo]::before {
+    content: attr(data-rotulo) ": ";
+    font-weight: bold;
+  }
+}
