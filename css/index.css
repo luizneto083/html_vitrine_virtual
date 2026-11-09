@@ -1,0 +1,7 @@
+.destaque-marcas .cartao {
+  background: var(--rosa-claro);
+}
+
+.destaque-marcas p {
+  margin: 0;
+}

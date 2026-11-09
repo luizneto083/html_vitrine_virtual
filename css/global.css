@@ -1,0 +1,338 @@
+/* ===== Variáveis ===== */
+:root {
+  --rosa: #c2185b;
+  --rosa-escuro: #8e1042;
+  --rosa-claro: #fde8ef;
+  --rosa-medio: #f3d6e0;
+  --borda: #f0c4d4;
+  --fundo: #fffafc;
+  --branco: #ffffff;
+  --texto: #333333;
+  --texto-suave: #5e4a53;
+  --aviso: #fff3cd;
+  --fonte: Arial, Helvetica, sans-serif;
+  --esp-1: 0.5rem;
+  --esp-2: 1rem;
+  --esp-3: 1.5rem;
+  --esp-4: 2rem;
+  --raio: 12px;
+  --largura: 1000px;
+}
+
+/* ===== Base ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  line-height: 1.5;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  margin: 0 0 var(--esp-1);
+}
+
+a {
+  color: var(--rosa);
+}
+
+a:hover {
+  color: var(--rosa-escuro);
+}
+
+:focus-visible {
+  outline: 3px solid #1a57c9;
+  outline-offset: 2px;
+}
+
+.pagina {
+  max-width: var(--largura);
+  margin: 0 auto;
+  padding: var(--esp-2);
+}
+
+.pular-conteudo {
+  position: absolute;
+  left: var(--esp-1);
+  top: -4rem;
+  background: var(--branco);
+  padding: var(--esp-1) var(--esp-2);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.pular-conteudo:focus {
+  top: var(--esp-1);
+}
+
+.so-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ===== Cabeçalho e menu ===== */
+.topo {
+  background: var(--rosa);
+  color: var(--branco);
+  padding: var(--esp-3);
+  border-radius: var(--raio);
+  text-align: center;
+}
+
+.topo .logo {
+  display: inline-block;
+  color: var(--branco);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.topo p {
+  margin: var(--esp-1) 0 0;
+}
+
+.menu ul {
+  list-style: none;
+  margin: var(--esp-2) 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menu a {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: var(--rosa-claro);
+  color: var(--rosa-escuro);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background: var(--rosa-medio);
+}
+
+.menu a[aria-current="page"] {
+  background: var(--rosa);
+  color: var(--branco);
+  font-weight: bold;
+}
+
+/* ===== Blocos, avisos, cards ===== */
+.bloco {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: var(--esp-3);
+  margin-bottom: var(--esp-3);
+}
+
+.aviso {
+  background: var(--aviso);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-bottom: var(--esp-2);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: var(--esp-2);
+}
+
+.cartao {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cartao h3 {
+  font-size: 1.05rem;
+}
+
+.cartao .botao {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.foto {
+  aspect-ratio: 1 / 1;
+  background: var(--rosa-medio);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 10px;
+  overflow: hidden;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.marca {
+  display: inline-block;
+  align-self: flex-start;
+  background: var(--rosa-claro);
+  color: var(--rosa-escuro);
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin: 0 0 6px;
+}
+
+.preco {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--rosa);
+  margin: 8px 0;
+}
+
+/* ===== Botões ===== */
+.botao,
+button {
+  display: inline-block;
+  font: inherit;
+  background: var(--rosa);
+  color: var(--branco);
+  border: 0;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.botao:hover,
+button:hover {
+  background: var(--rosa-escuro);
+  color: var(--branco);
+}
+
+.botao-claro {
+  background: var(--rosa-claro);
+  color: var(--rosa-escuro);
+}
+
+.botao-claro:hover {
+  background: var(--rosa-medio);
+  color: var(--rosa-escuro);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-1);
+  margin-top: var(--esp-2);
+}
+
+/* ===== Tabelas ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid var(--borda);
+  text-align: left;
+}
+
+thead th,
+tbody th {
+  background: var(--rosa-claro);
+}
+
+caption {
+  text-align: left;
+  font-weight: bold;
+  padding: 0 0 var(--esp-1);
+}
+
+/* ===== Formulários ===== */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #9a7a88;
+  border-radius: 8px;
+  background: var(--branco);
+  color: var(--texto);
+}
+
+.campo {
+  margin-bottom: var(--esp-2);
+}
+
+/* ===== Layout em colunas ===== */
+.duas-colunas {
+  display: grid;
+  gap: var(--esp-3);
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+  margin-top: var(--esp-3);
+  padding: var(--esp-2);
+  background: var(--rosa-medio);
+  border-radius: var(--raio);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.rodape address {
+  font-style: normal;
+}
+
+.rodape p {
+  margin: 0 0 var(--esp-1);
+}
+
+@media (min-width: 768px) {
+  .pagina {
+    padding: var(--esp-3);
+  }
+
+  .duas-colunas {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .topo .logo {
+    font-size: 1.8rem;
+  }
+}
