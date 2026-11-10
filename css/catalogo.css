@@ -69,8 +69,7 @@
 }
 
 /* Aparece quando todos os cards estão ocultos (combinações sem produto) */
-.catalogo:has(#marca-boticario:checked):has(#cat-maquiagem:checked)
-  .sem-resultado,
+.catalogo:has(#marca-boticario:checked):has(#cat-maquiagem:checked) .sem-resultado,
 .catalogo:has(#marca-boticario:checked):has(#cat-pele:checked) .sem-resultado,
 .catalogo:has(#marca-natura:checked):has(#cat-corpo:checked) .sem-resultado,
 .catalogo:has(#marca-natura:checked):has(#cat-pele:checked) .sem-resultado,
