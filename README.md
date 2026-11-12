@@ -23,7 +23,7 @@ e entre em contato com o vendedor, que não possui loja física.
 
 - **Página inicial** com apresentação da loja, das marcas e dos produtos em destaque
 - **Catálogo** com 6 produtos (imagem, marca, descrição e preço) e **filtros por marca e por categoria**, que podem ser combinados entre si; quando nenhum produto atende à combinação escolhida, uma mensagem é exibida
-- **Página de produto** com foto, preço, descrição, tabela de informações e detalhes de uso e pagamento
+- **Página de produto** com foto, preço, descrição, tabela de informações e detalhes de uso, ingredientes, pirâmide olfativa, ocasião e pagamento
 - **Carrinho demonstrativo** com itens de exemplo, subtotais, frete a combinar e total
 - **Contato** com os dados do vendedor (WhatsApp e Instagram clicáveis) e formulário com validação nativa do navegador (campos obrigatórios, e-mail válido, telefone no formato brasileiro e tamanho mínimo da mensagem)
 - **Página 404** simples, com link de volta ao início
