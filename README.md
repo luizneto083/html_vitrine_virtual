@@ -22,8 +22,8 @@ e entre em contato com o vendedor, que não possui loja física.
 ## Funcionalidades
 
 - **Página inicial** com apresentação da loja, das marcas e dos produtos em destaque
-- **Catálogo** com 6 produtos (imagem, marca, descrição e preço) e **filtros por marca e por categoria**, que podem ser combinados entre si; quando nenhum produto atende à combinação escolhida, uma mensagem é exibida
-- **Página de produto** com foto, preço, descrição, tabela de informações e detalhes de uso, ingredientes, pirâmide olfativa, ocasião e pagamento
+- **Catálogo** com 6 produtos (imagem, marca, descrição e preço) e **filtros por marca e por categoria**, que podem ser combinados entre si; quando nenhum produto atende à combinação escolhida, uma mensagem é exibida. Cada card leva à página do seu próprio produto
+- **Uma página para cada produto** com foto, preço, descrição, tabela de informações e detalhes expansíveis (`details` e `summary`) de uso, ingredientes, pirâmide olfativa, ocasião e pagamento
 - **Carrinho demonstrativo** com itens de exemplo, subtotais, frete a combinar e total
 - **Contato** com os dados do vendedor (WhatsApp e Instagram clicáveis) e formulário com validação nativa do navegador (campos obrigatórios, e-mail válido, telefone no formato brasileiro e tamanho mínimo da mensagem)
 - **Página 404** simples, com link de volta ao início
@@ -43,29 +43,39 @@ e entre em contato com o vendedor, que não possui loja física.
 
 ## Páginas
 
-| Página          | Descrição                                                      |
-| --------------- | -------------------------------------------------------------- |
-| `index.html`    | Início: apresentação da loja, marcas e produtos em destaque    |
-| `catalogo.html` | Catálogo com todos os produtos e filtros por marca e categoria |
-| `produto.html`  | Detalhes de um produto                                         |
-| `carrinho.html` | Carrinho de compras demonstrativo                              |
-| `contato.html`  | Contato com o vendedor e formulário de mensagem                |
-| `404.html`      | Página de "não encontrado"                                     |
+| Página                     | Descrição                                                                |
+| -------------------------- | ------------------------------------------------------------------------ |
+| `index.html`               | Início: apresentação da loja, marcas e produtos em destaque              |
+| `catalogo.html`            | Catálogo com todos os produtos e filtros por marca e categoria           |
+| `produtoegeo.html`         | Detalhes do Egeo Dolce Desodorante Colônia 90ml (O Boticário)            |
+| `produtonativa.html`       | Detalhes da Loção Hidratante Nativa SPA Ameixa Negra 400ml (O Boticário) |
+| `produtokaiak.html`        | Detalhes do Deo Colônia Masculino Kaiak Aventura 100 ml (Natura)         |
+| `produtonude.html`         | Detalhes da Base Sérum Nude Me Una (Natura)                              |
+| `produtobasetimewise.html` | Detalhes da Base Time Wise 3D 30ml (Mary Kay)                            |
+| `produtohidratante.html`   | Detalhes do Hidratante Antioxidante TimeWise 85g (Mary Kay)              |
+| `carrinho.html`            | Carrinho de compras demonstrativo                                        |
+| `contato.html`             | Contato com o vendedor e formulário de mensagem                          |
+| `404.html`                 | Página de "não encontrado"                                               |
 
 ## Estrutura de pastas
 
 ```
 html_vitrine_virtual/
 ├── css/
-│   ├── global.css      Variáveis, cabeçalho, menu, cards, botões, tabelas e formulários
-│   ├── index.css       Estilos da página inicial
-│   ├── catalogo.css    Filtros e mensagem de "nenhum produto"
-│   ├── produto.css     Estilos da página de produto
-│   ├── carrinho.css    Estilos do carrinho (tabela vira cartões no celular)
-│   ├── contato.css     Estilos da página de contato
-│   └── 404.css         Estilos da página 404
-├── html/               Páginas do site
-├── img/                Fotos dos produtos e favicon
+│   ├── global.css               Variáveis, cabeçalho, menu, cards, botões, tabelas e formulários
+│   ├── index.css                Estilos da página inicial
+│   ├── catalogo.css             Filtros e mensagem de "nenhum produto"
+│   ├── produtoegeo.css          Estilos da página do Egeo Dolce
+│   ├── produtonativa.css        Estilos da página da Nativa SPA Ameixa Negra
+│   ├── produtokaiak.css         Estilos da página do Kaiak Aventura
+│   ├── produtonude.css          Estilos da página da Base Sérum Nude Me Una
+│   ├── produtobasetimewise.css  Estilos da página da Base Time Wise 3D
+│   ├── produtohidratante.css    Estilos da página do Hidratante TimeWise
+│   ├── carrinho.css             Estilos do carrinho (tabela vira cartões no celular)
+│   ├── contato.css              Estilos da página de contato
+│   └── 404.css                  Estilos da página 404
+├── html/                        Páginas do site (início, catálogo, 6 produtos, carrinho, contato e 404)
+├── img/                         Fotos dos produtos e favicon
 └── README.md
 ```
 
@@ -75,7 +85,7 @@ Abra o arquivo `html/index.html` no navegador, ou use a extensão **Live Server*
 
 ## Próximos passos
 
-- [ ] Criar a página de detalhes de cada um dos demais produtos e ligar cada card do catálogo à sua página (por enquanto, todos os cards levam à mesma página de produto, apenas para demonstração)
+- [x] Criar a página de detalhes de cada um dos demais produtos e ligar cada card do catálogo à sua página
 - [ ] Adicionar mais produtos ao catálogo
 
 ## Observações
