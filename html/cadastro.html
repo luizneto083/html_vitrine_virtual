@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Luiz Ferreira Dos Santos Neto e Victor Gabriel" />
+    <meta
+      name="description"
+      content="Tela demonstrativa de cadastro da vitrine de beleza: não cria conta nem guarda dados."
+    />
+    <title>Criar conta | Eline Beauty Cosméticos &amp; Cuidados</title>
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/cadastro.css" />
+  </head>
+  <body>
+    <a class="pular-conteudo" href="#conteudo">Ir para o conteúdo</a>
+    <div class="pagina">
+      <header class="topo">
+        <a class="logo" href="index.html">Eline Beauty Cosméticos &amp; Cuidados</a>
+        <p>Perfumes, cosméticos e cuidados pessoais em um só lugar</p>
+      </header>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="carrinho.html">Carrinho</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html" aria-current="page">Entrar</a></li>
+        </ul>
+      </nav>
+
+      <main id="conteudo">
+        <section class="bloco bloco-estreito" aria-labelledby="t-cadastro">
+          <h1 id="t-cadastro">Criar conta</h1>
+          <p class="aviso">
+            Tela demonstrativa: os campos são validados pelo navegador, mas nenhuma conta é criada.
+            Não há servidor e nenhum dado é enviado ou guardado.
+          </p>
+          <!--
+            Tela demonstrativa: action="conta.html" com method="get" e inputs SEM o atributo "name".
+            A validação nativa do HTML roda e a página muda, mas nenhum dado (muito menos a senha)
+            é enviado ou aparece na URL.
+          -->
+          <form action="conta.html" method="get">
+            <div class="campo">
+              <label for="nome">Nome</label>
+              <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+                autocomplete="name"
+                minlength="3"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="seunome@exemplo.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label for="telefone">Telefone / WhatsApp (opcional)</label>
+              <input
+                type="tel"
+                id="telefone"
+                placeholder="(83) 90000-0000"
+                autocomplete="tel"
+                pattern="\(?[0-9]{2}\)?\s?9?[0-9]{4}-?[0-9]{4}"
+                title="Use o formato (83) 90000-0000"
+              />
+            </div>
+            <div class="campo">
+              <label for="senha">Senha</label>
+              <input
+                type="password"
+                id="senha"
+                placeholder="Mínimo de 8 caracteres"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              />
+            </div>
+            <div class="campo campo-check">
+              <input type="checkbox" id="demo" required />
+              <label for="demo">Li e concordo que esta é uma tela demonstrativa</label>
+            </div>
+            <button type="submit">Criar conta</button>
+          </form>
+          <p class="link-alternativo">Já tenho conta. <a href="login.html">Entrar</a></p>
+        </section>
+      </main>
+
+      <footer class="rodape">
+        <p>
+          Projeto acadêmico de Luiz Ferreira Dos Santos Neto e Victor Gabriel &mdash;
+          Desenvolvimento Front-End para Web, UNIPÊ.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
