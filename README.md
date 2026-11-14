@@ -1,7 +1,5 @@
 # Vitrine Virtual de Cosméticos
 
-> 🚧 **Projeto em desenvolvimento.** Esta é uma versão em evolução e ainda vai receber novas páginas e melhorias.
-
 Projeto final da disciplina de **Desenvolvimento Front-End para Web** (UNIPÊ), desenvolvido em dupla por
 **Luiz Ferreira Dos Santos Neto** e **Victor Gabriel**.
 
