@@ -299,6 +299,12 @@ textarea {
   margin-bottom: var(--esp-2);
 }
 
+/* ===== Cartão estreito (login, cadastro, confirmação) ===== */
+.bloco-estreito {
+  max-width: 480px;
+  margin-inline: auto;
+}
+
 /* ===== Layout em colunas ===== */
 .duas-colunas {
   display: grid;

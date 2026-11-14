@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Luiz Ferreira Dos Santos Neto e Victor Gabriel" />
+    <meta
+      name="description"
+      content="Tela demonstrativa de login da vitrine de beleza: não autentica nem guarda dados."
+    />
+    <title>Entrar | Eline Beauty Cosméticos &amp; Cuidados</title>
+    <link rel="icon" href="../img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <a class="pular-conteudo" href="#conteudo">Ir para o conteúdo</a>
+    <div class="pagina">
+      <header class="topo">
+        <a class="logo" href="index.html">Eline Beauty Cosméticos &amp; Cuidados</a>
+        <p>Perfumes, cosméticos e cuidados pessoais em um só lugar</p>
+      </header>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="carrinho.html">Carrinho</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="login.html" aria-current="page">Entrar</a></li>
+        </ul>
+      </nav>
+
+      <main id="conteudo">
+        <section class="bloco bloco-estreito" aria-labelledby="t-login">
+          <h1 id="t-login">Entrar</h1>
+          <p class="aviso">
+            Tela demonstrativa: os campos são validados pelo navegador, mas ninguém é autenticado.
+            Não há servidor e nenhum dado é enviado ou guardado.
+          </p>
+          <!--
+            Tela demonstrativa: action="conta.html" com method="get" e inputs SEM o atributo "name".
+            A validação nativa do HTML roda e a página muda, mas nenhum dado (muito menos a senha)
+            é enviado ou aparece na URL.
+          -->
+          <form action="conta.html" method="get">
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="seunome@exemplo.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="campo">
+              <label for="senha">Senha</label>
+              <input
+                type="password"
+                id="senha"
+                placeholder="Mínimo de 8 caracteres"
+                autocomplete="current-password"
+                minlength="8"
+                required
+              />
+            </div>
+            <button type="submit">Entrar</button>
+          </form>
+          <p class="link-alternativo">
+            Ainda não tem conta? <a href="cadastro.html">Criar conta</a>
+          </p>
+        </section>
+      </main>
+
+      <footer class="rodape">
+        <p>
+          Projeto acadêmico de Luiz Ferreira Dos Santos Neto e Victor Gabriel &mdash;
+          Desenvolvimento Front-End para Web, UNIPÊ.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
