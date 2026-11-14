@@ -5,3 +5,7 @@
 .destaque-marcas p {
   margin: 0;
 }
+
+.destaque-marcas {
+  margin-bottom: var(--esp-3);
+}
